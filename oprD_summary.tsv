@@ -1,0 +1,11 @@
+oprD_copy	contig	start	end	length_bp	strand	status
+oprD_1	gnl|X|FGANMEIC_5	33105	34412	1308	-	full_length
+oprD_2	gnl|X|FGANMEIC_10	162841	164121	1281	-	full_length
+oprD_3	gnl|X|FGANMEIC_11	63432	64883	1452	-	full_length
+oprD_4	gnl|X|FGANMEIC_12	114916	116250	1335	+	full_length
+oprD_5	gnl|X|FGANMEIC_12	145875	147233	1359	-	full_length
+oprD_6	gnl|X|FGANMEIC_16	16071	16901	831	+	truncated_moderate
+oprD_7	gnl|X|FGANMEIC_16	16959	17396	438	+	truncated_severe
+oprD_8	gnl|X|FGANMEIC_36	38286	39704	1419	-	full_length
+oprD_9	gnl|X|FGANMEIC_42	18837	19031	195	-	truncated_severe
+oprD_10	gnl|X|FGANMEIC_51	377	1723	1347	+	full_length
