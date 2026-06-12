@@ -7,7 +7,7 @@
 
 ## Overview
 End-to-end whole genome sequence analysis of a clinical multidrug-resistant 
-*Pseudomonas aeruginosa* isolate (NCBI SRA: SRR39076870), identifying a dual 
+*Pseudomonas aeruginosa* isolate (NCBI SRA: SRR39076870; BioSample: SAMN60724101; BioProject: PRJNA288601), identifying a dual 
 carbapenem resistance mechanism combining VIM-2 metallo-β-lactamase production 
 with OprD outer membrane porin disruption.
 
@@ -16,7 +16,7 @@ with OprD outer membrane porin disruption.
 - **Genome:** 7.24 Mb, 125 contigs, N50 = 191,030 bp, GC = 65.64%
 - **Completeness:** 99.7% BUSCO (pseudomonadales_odb10, n=782)
 - **AMR genes:** blaVIM-2, blaOXA-395, fosA, sul1, tmexD2, aac(6')-29b, aph(3')-IIb
-- **Key finding:** 10 oprD paralogs — 7 full-length, 2 truncated (single disrupted gene), 1 pseudogene in genomic island context
+- **Key finding:** 10 oprD-like sequences identified — 7 full-length, 2 truncated (single disrupted gene), and 1 pseudogene in a genomic island context
 
 ## Pipeline
 
@@ -40,8 +40,7 @@ with OprD outer membrane porin disruption.
 
 ## Data Source
 Raw reads obtained from NCBI SRA accession SRR39076870 (BioProject: PRJNA288601).
-Deposited June 2026. No associated publication at time of analysis.
-Analysis performed independently.
+Analysis performed independently. 
 
 ## Results
 
@@ -80,6 +79,10 @@ Analysis performed independently.
 | oprD_9 | 195 | Pseudogene |
 | oprD_10 | 1347 | Full-length |
 
+#### OprD copy number status
+
+![OprD copy number status](oprD_copy_number_status.png)
+
 oprD_6 and oprD_7 are located in tandem on the same contig (58 bp apart),
 together representing a single gene disrupted by frameshift/indel.
 oprD_9 is flanked by a toxin-antitoxin system (rnlA/rnlB), suggesting
@@ -93,11 +96,15 @@ consistent with ongoing resistance evolution — directly relevant to research
 on adaptive laboratory evolution of carbapenem resistance in *P. aeruginosa*.
 
 ## Repository Contents
-figures/
-    oprD_copy_number_status.png
 
-results/
-    oprD_summary.tsv
+- `oprD_copy_number_status.png` — OprD copy number visualization
+- `oprD_summary.tsv` — OprD copy number analysis table
+    
+## Citation
+
+If you use this repository, please cite:
+
+Devkota P. (2026). *Whole genome sequence analysis of MDR Pseudomonas aeruginosa ST111: dual carbapenem resistance mechanism*. GitHub repository.
 
 ## Contact
 Pareekshya Devkota  
