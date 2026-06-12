@@ -1,2 +1,102 @@
-# -PA-ST111-WGS-analysis
-Whole genome sequence analysis of MDR Pseudomonas aeruginosa ST111 — dual carbapenem resistance mechanism
+# WGS Analysis of MDR Pseudomonas aeruginosa ST111
+
+**Author:** Pareekshya Devkota  
+**Institution:** Central Department of Biotechnology, Tribhuvan University  
+**Date:** June 2026  
+**ORCID:** 0009-0003-8645-0626
+
+## Overview
+End-to-end whole genome sequence analysis of a clinical multidrug-resistant 
+*Pseudomonas aeruginosa* isolate (NCBI SRA: SRR39076870), identifying a dual 
+carbapenem resistance mechanism combining VIM-2 metallo-β-lactamase production 
+with OprD outer membrane porin disruption.
+
+## Key Findings
+- **Sequence type:** ST111 — globally disseminated high-risk clonal lineage
+- **Genome:** 7.24 Mb, 125 contigs, N50 = 191,030 bp, GC = 65.64%
+- **Completeness:** 99.7% BUSCO (pseudomonadales_odb10, n=782)
+- **AMR genes:** blaVIM-2, blaOXA-395, fosA, sul1, tmexD2, aac(6')-29b, aph(3')-IIb
+- **Key finding:** 10 oprD paralogs — 7 full-length, 2 truncated (single disrupted gene), 1 pseudogene in genomic island context
+
+## Pipeline
+
+### Tools and versions
+| Tool | Version | Purpose |
+|------|---------|---------|
+| fasterq-dump | latest | Read download |
+| FastQC | 0.11 | Quality control |
+| SPAdes | 3.15 | De novo assembly |
+| QUAST | latest | Assembly QC |
+| Kraken2 | latest | Taxonomic classification |
+| ABRicate | 1.0 | AMR + virulence screening |
+| MLST | 2.33.1 | Sequence typing |
+| Prokka | 1.15.6 | Genome annotation |
+| Snippy | 4.6.0 | Variant calling |
+| BUSCO | 6.1.0 | Genome completeness |
+
+### Environment
+- OS: Ubuntu 24 (WSL2), 12 CPU cores, 7.6 GB RAM
+- conda environments: snippy_env, checkm_env
+
+## Data Source
+Raw reads obtained from NCBI SRA accession SRR39076870 (BioProject: PRJNA288601).
+Deposited June 2026. No associated publication at time of analysis.
+Analysis performed independently.
+
+## Results
+
+### Assembly statistics
+| Metric | Value |
+|--------|-------|
+| Total contigs | 125 |
+| Contigs ≥1000 bp | 97 |
+| Total length | 7,240,967 bp |
+| N50 | 191,030 bp |
+| GC content | 65.64% |
+| BUSCO completeness | 99.7% |
+
+### AMR profile
+| Gene | Class | Mechanism |
+|------|-------|-----------|
+| blaVIM-2 | Carbapenem | Metallo-β-lactamase |
+| blaOXA-395 | β-lactam | Serine β-lactamase |
+| fosA | Fosfomycin | Glutathione transferase |
+| sul1 | Sulfonamide | Target replacement |
+| tmexD2 | Tetracycline | Efflux pump |
+| aac(6')-29b | Aminoglycoside | Acetyltransferase |
+| aph(3')-IIb | Aminoglycoside | Phosphotransferase |
+
+### OprD copy number analysis
+| Copy | Length (bp) | Status |
+|------|-------------|--------|
+| oprD_1 | 1308 | Full-length |
+| oprD_2 | 1281 | Full-length |
+| oprD_3 | 1452 | Full-length |
+| oprD_4 | 1335 | Full-length |
+| oprD_5 | 1359 | Full-length |
+| oprD_6 | 831 | Truncated (N-terminal fragment) |
+| oprD_7 | 438 | Truncated (C-terminal fragment) |
+| oprD_8 | 1419 | Full-length |
+| oprD_9 | 195 | Pseudogene |
+| oprD_10 | 1347 | Full-length |
+
+oprD_6 and oprD_7 are located in tandem on the same contig (58 bp apart),
+together representing a single gene disrupted by frameshift/indel.
+oprD_9 is flanked by a toxin-antitoxin system (rnlA/rnlB), suggesting
+genomic island context.
+
+## Biological Significance
+The co-occurrence of VIM-2 and OprD disruption constitutes dual carbapenem
+resistance: enzymatic destruction combined with reduced membrane permeability.
+The oprD_6/oprD_7 split gene pattern suggests active genomic disruption
+consistent with ongoing resistance evolution — directly relevant to research
+on adaptive laboratory evolution of carbapenem resistance in *P. aeruginosa*.
+
+## Repository Contents
+- `results/oprD_summary.tsv` — OprD copy number analysis table
+- `figures/` — publication-quality figures
+
+## Contact
+Pareekshya Devkota  
+devkotapareekshya08@gmail.com  
+ORCID: [0009-0003-8645-0626](https://orcid.org/0009-0003-8645-0626)
