@@ -93,8 +93,11 @@ consistent with ongoing resistance evolution — directly relevant to research
 on adaptive laboratory evolution of carbapenem resistance in *P. aeruginosa*.
 
 ## Repository Contents
-- `results/oprD_summary.tsv` — OprD copy number analysis table
-- `figures/` — publication-quality figures
+figures/
+    oprD_copy_number_status.png
+
+results/
+    oprD_summary.tsv
 
 ## Contact
 Pareekshya Devkota  
