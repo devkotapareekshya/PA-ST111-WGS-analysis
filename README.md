@@ -39,9 +39,11 @@ with OprD outer membrane porin disruption.
 - conda environments: snippy_env, checkm_env
 
 ## Data Source
-Raw reads obtained from NCBI SRA accession SRR39076870 (BioProject: PRJNA288601).
-Analysis performed independently. 
-
+Raw reads obtained from NCBI SRA accession SRR39076870 
+(BioProject: PRJNA288601), deposited June 9, 2026 by the Florida 
+Department of Health under the CDC HAI-Seq surveillance programme. 
+No associated publication at time of analysis. Analysis performed 
+independently.
 ## Results
 
 ### Assembly statistics
@@ -104,7 +106,9 @@ on adaptive laboratory evolution of carbapenem resistance in *P. aeruginosa*.
 
 If you use this repository, please cite:
 
-Devkota P. (2026). *Whole genome sequence analysis of MDR Pseudomonas aeruginosa ST111: dual carbapenem resistance mechanism*. GitHub repository.
+Devkota P. (2026). Whole genome sequence analysis of MDR 
+Pseudomonas aeruginosa ST111: dual carbapenem resistance mechanism. 
+GitHub. https://github.com/devkotapareekshya/PA-ST111-WGS-analysis
 
 ## Contact
 Pareekshya Devkota  
