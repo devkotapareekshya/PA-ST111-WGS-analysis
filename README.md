@@ -1,7 +1,7 @@
 # WGS Analysis of MDR Pseudomonas aeruginosa ST111
 
 **Author:** Pareekshya Devkota  
-**Institution:** Central Department of Biotechnology, Tribhuvan University  
+**Institution:** Tri-Chandra Multiple Campus, Tribhuvan University  
 **Date:** June 2026  
 **ORCID:** 0009-0003-8645-0626
 
