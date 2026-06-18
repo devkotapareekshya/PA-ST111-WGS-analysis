@@ -7,16 +7,14 @@
 
 ## Overview
 End-to-end whole genome sequence analysis of a clinical multidrug-resistant 
-*Pseudomonas aeruginosa* isolate (NCBI SRA: SRR39076870; BioSample: SAMN60724101; BioProject: PRJNA288601), identifying a dual 
-carbapenem resistance mechanism combining VIM-2 metallo-β-lactamase production 
-with OprD outer membrane porin disruption.
+*Pseudomonas aeruginosa* isolate (NCBI SRA: SRR39076870; BioSample: SAMN60724101; BioProject: PRJNA288601), suggesting a dual carbapenem resistance mechanism involving acquired carbapenemase production and putative OprD disruption.
 
 ## Key Findings
 - **Sequence type:** ST111 — globally disseminated high-risk clonal lineage
 - **Genome:** 7.24 Mb, 125 contigs, N50 = 191,030 bp, GC = 65.64%
 - **Completeness:** 99.7% BUSCO (pseudomonadales_odb10, n=782)
 - **AMR genes:** blaVIM-2, blaOXA-395, fosA, sul1, tmexD2, aac(6')-29b, aph(3')-IIb
-- **Key finding:** 10 oprD-like sequences identified — 7 full-length, 2 truncated (single disrupted gene), and 1 pseudogene in a genomic island context
+- **Key finding:** Ten OprD-homologous regions were identified, including seven full-length homologues, two truncated fragments likely representing a disrupted locus, and one short pseudogene-like remnant.
 
 ## Pipeline
 
@@ -26,8 +24,8 @@ with OprD outer membrane porin disruption.
 | fasterq-dump | latest | Read download |
 | FastQC | 0.11 | Quality control |
 | SPAdes | 3.15 | De novo assembly |
-| QUAST | latest | Assembly QC |
-| Kraken2 | latest | Taxonomic classification |
+| QUAST | 5.3.0 | Assembly QC |
+| Kraken2 | 2.17.1 | Taxonomic classification |
 | ABRicate | 1.0 | AMR + virulence screening |
 | MLST | 2.33.1 | Sequence typing |
 | Prokka | 1.15.6 | Genome annotation |
