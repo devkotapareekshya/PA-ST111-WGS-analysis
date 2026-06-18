@@ -21,7 +21,7 @@ End-to-end whole genome sequence analysis of a clinical multidrug-resistant
 ### Tools and versions
 | Tool | Version | Purpose |
 |------|---------|---------|
-| fasterq-dump | latest | Read download |
+| fasterq-dump | 2.11.3 | Read download |
 | FastQC | 0.11 | Quality control |
 | SPAdes | 3.15 | De novo assembly |
 | QUAST | 5.3.0 | Assembly QC |
@@ -29,7 +29,7 @@ End-to-end whole genome sequence analysis of a clinical multidrug-resistant
 | ABRicate | 1.0 | AMR + virulence screening |
 | MLST | 2.33.1 | Sequence typing |
 | Prokka | 1.15.6 | Genome annotation |
-| Snippy | 4.6.0 | Variant calling |
+| Snippy | 3.1 | Variant calling |
 | BUSCO | 6.1.0 | Genome completeness |
 
 ### Environment
@@ -40,7 +40,7 @@ End-to-end whole genome sequence analysis of a clinical multidrug-resistant
 Raw reads obtained from NCBI SRA accession SRR39076870 
 (BioProject: PRJNA288601), deposited June 9, 2026 by the Florida 
 Department of Health under the CDC HAI-Seq surveillance programme. 
-No associated publication at time of analysis. Analysis performed 
+No associated peer-reviewed publication was available at the time of analysis. Analysis performed 
 independently.
 ## Results
 
@@ -85,9 +85,7 @@ independently.
 
 oprD_6 and oprD_7 are located in tandem on the same contig (58 bp apart),
 together representing a single gene disrupted by frameshift/indel.
-oprD_9 is flanked by a toxin-antitoxin system (rnlA/rnlB), suggesting
-genomic island context.
-
+oprD_9 is flanked by a toxin-antitoxin system (rnlA/rnlB), suggests ongoing genomic rearrangement associated with resistance evolution
 ## Biological Significance
 The co-occurrence of VIM-2 and OprD disruption is consistent with dual carbapenem resistance mechanisms involving enzymatic degradation and reduced membrane permeability.
 The oprD_6/oprD_7 split gene pattern suggests active genomic disruption
