@@ -89,8 +89,7 @@ oprD_9 is flanked by a toxin-antitoxin system (rnlA/rnlB), suggesting
 genomic island context.
 
 ## Biological Significance
-The co-occurrence of VIM-2 and OprD disruption constitutes dual carbapenem
-resistance: enzymatic destruction combined with reduced membrane permeability.
+The co-occurrence of VIM-2 and OprD disruption is consistent with dual carbapenem resistance mechanisms involving enzymatic degradation and reduced membrane permeability.
 The oprD_6/oprD_7 split gene pattern suggests active genomic disruption
 consistent with ongoing resistance evolution — directly relevant to research
 on adaptive laboratory evolution of carbapenem resistance in *P. aeruginosa*.
