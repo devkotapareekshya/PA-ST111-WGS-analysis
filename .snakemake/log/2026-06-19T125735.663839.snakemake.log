@@ -1,0 +1,58 @@
+Assuming unrestricted shared filesystem usage.
+
+SNAKEMAKE
+=========
+  Date: 2026-06-19 12:57:35
+  Workflow ID: b7c12fef-8630-4e18-a744-d470a3c88e0e
+  Platform: Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.35
+  Host: DESKTOP-F07C4FS
+  User: lenovop
+  Snakemake version: 9.22.0
+  Python version: 3.13.13 | packaged by conda-forge | (main, Apr  8 2026, 02:00:33) [GCC 14.3.0]
+  Command: /home/lenovop/miniconda3/bin/snakemake --cores 1
+  Snakefile: /home/lenovop/oprd_pipeline/Snakefile
+  Base directory: /home/lenovop/oprd_pipeline
+  Run directory: /home/lenovop/oprd_pipeline
+  Working directory: /home/lenovop/oprd_pipeline
+  Config file(s): []
+  Config MD5: 99914b932bd37a50b983c5e7c90ae93b
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                count
+---------------  -------
+run_oprd_screen        2
+all                    1
+total                  3
+
+Select jobs to execute...
+Execute 1 jobs...
+[Fri Jun 19 12:57:35 2026]
+Job 2: [*] Screen processing for sample: sample2
+Reason: Missing output files: results/sample2/oprd_summary.tsv
+Select jobs to execute...
+[Fri Jun 19 12:57:38 2026]
+Finished jobid: 2 (Rule: run_oprd_screen)
+1 of 3 steps (33%) done
+Execute 1 jobs...
+[Fri Jun 19 12:57:38 2026]
+Job 1: [*] Screen processing for sample: sample1
+Reason: Missing output files: results/sample1/oprd_summary.tsv
+[Fri Jun 19 12:57:41 2026]
+Finished jobid: 1 (Rule: run_oprd_screen)
+2 of 3 steps (67%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Fri Jun 19 12:57:41 2026]
+localrule all:
+    input: results/sample1/oprd_summary.tsv, results/sample2/oprd_summary.tsv
+    jobid: 0
+    reason: Input files updated by another job: results/sample2/oprd_summary.tsv, results/sample1/oprd_summary.tsv
+    resources: tmpdir=/tmp
+[Fri Jun 19 12:57:41 2026]
+Finished jobid: 0 (Rule: all)
+3 of 3 steps (100%) done
+Complete log(s): /home/lenovop/oprd_pipeline/.snakemake/log/2026-06-19T125735.663839.snakemake.log
