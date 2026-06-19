@@ -1,0 +1,13 @@
+name: oprd-pipeline
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.10
+  - blast=2.14.0
+  - pandas=2.0.3
+  - matplotlib=3.7.2
+  - snakemake=7.32.4
+  - biopython=1.81
+  - pip

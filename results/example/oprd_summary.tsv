@@ -1,0 +1,10 @@
+sseqid	length	qlen	coverage	pident	classification
+contig_1	1332	1332	100.0	99.8	Full-length (Intact)
+contig_4	1332	1332	100.0	99.5	Full-length (Intact)
+contig_7	1332	1332	100.0	99.1	Full-length (Intact)
+contig_12	1332	1332	100.0	98.7	Full-length (Intact)
+contig_15	1332	1332	100.0	98.4	Full-length (Intact)
+contig_19	1332	1332	100.0	97.9	Full-length (Intact)
+contig_23	1332	1332	100.0	97.2	Full-length (Intact)
+contig_31	890	1332	66.8	88.3	Truncated
+contig_47	210	1332	15.8	76.1	Pseudogene / Fragment
