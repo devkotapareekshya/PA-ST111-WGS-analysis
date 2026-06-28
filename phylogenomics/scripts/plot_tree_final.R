@@ -25,27 +25,26 @@ amr_summary <- amr %>%
   pivot_wider(names_from=gene, values_from=present, values_fill="no") %>%
   column_to_rownames("sample")
 
-# Shorten tip labels for display
+# Shorten tip labels
 tree$tip.label <- gsub("_ASM.*|_NA$|_SMC.*", "", tree$tip.label)
-
-# Also shorten rownames of amr_summary
 rownames(amr_summary) <- gsub("_ASM.*|_NA$|_SMC.*", "", rownames(amr_summary))
 
 p <- ggtree(tree, layout="rectangular") +
-  geom_tiplab(size=2.5, align=TRUE) +
+  geom_tiplab(size=3, align=TRUE) +
   theme_tree2() +
-  xlim(0, 6)
+  xlim(0, 10)
 
 p2 <- gheatmap(p, amr_summary,
-               offset=2.5,
-               width=0.5,
+               offset=6,
+               width=0.4,
                colnames_angle=45,
                colnames_offset_y=0.5,
-               font.size=3) +
+               font.size=3.5) +
   scale_fill_manual(values=c("no"="white", "yes"="#c0392b"),
                     name="Present") +
-  theme(legend.position="bottom")
+  theme(legend.position="bottom",
+        plot.margin=margin(10, 20, 40, 10))
 
 ggsave("phylogenomics/figures/ST111_phylo_AMR_final.png", p2, 
-       width=22, height=12, dpi=300)
+       width=26, height=14, dpi=300)
 cat("Done\n")
