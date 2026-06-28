@@ -1,4 +1,27 @@
-genomes/
+# Python
+__pycache__/
+*.pyc
+
+# R
+.Rhistory
+.RData
+
+# Conda
+.env
+.venv
+
+# macOS
+.DS_Store
+
+# Temporary files
+tmp/
+temp/
+
+# SPAdes temporary files
+*/tmp/
+
+# Logs
+*.loggenomes/
 snippy/
 gubbins/
 pa_complete_dehydrated/
