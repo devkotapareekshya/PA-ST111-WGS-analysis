@@ -109,3 +109,26 @@ GitHub. https://github.com/devkotapareekshya/PA-ST111-WGS-analysis
 Pareekshya Devkota  
 devkotapareekshya08@gmail.com  
 ORCID: [0009-0003-8645-0626](https://orcid.org/0009-0003-8645-0626)
+
+## Phylogenomics Analysis (n=24 public ST111 genomes)
+
+Extended analysis incorporating 24 complete *P. aeruginosa* ST111 genomes from NCBI RefSeq alongside the 5 clinical isolates.
+
+### Pipeline
+- Genome download: NCBI datasets CLI
+- MLST filtering: mlst v2.35 (paeruginosa scheme)
+- Core SNP alignment: Snippy v4.6 vs PAO1 reference (GCF_000006765.1)
+- Recombination masking: Gubbins v3.3
+- Phylogeny: IQ-TREE2 GTR+G, 1000 ultrafast bootstraps
+- AMR profiling: AMRFinderPlus v4.2.7 (database 2026-05-15.1)
+- Visualization: ggtree v4.0 in R
+
+### Key findings (24 genomes)
+- blaVIM-2 present in 7/24 (29%) genomes
+- oprD disrupted in 15/24 (63%) genomes via diverse truncating mutations
+- blaVIM-2 and oprD disruption are **mutually exclusive** across all 24 genomes
+- Conserved MDR backbone: blaPDC-3, gyrA_T83I, fosA, catB7 in >90% of genomes
+- Multiple independent oprD disruption events (convergent evolution)
+
+### Output
+See `phylogenomics/` folder for scripts, tree file, AMR results, and figures.
