@@ -85,6 +85,10 @@ Whole genome sequence analysis of a clinical multidrug-resistant *Pseudomonas ae
 
 ![ST111 phylogenomics](results/figures/ST111_phylo_AMR_final.png)
 
+### Phylogenomics figure
+
+![ST111 phylogenomics](results/figures/ST111_phylo_AMR_final.png)
+
 oprD_6 and oprD_7 are located in tandem on the same contig (58 bp apart), together representing a single disrupted locus. oprD_9 is flanked by a toxin-antitoxin system (rnlA/rnlB), suggesting ongoing genomic rearrangement associated with resistance evolution.
 
 ### Biological significance
