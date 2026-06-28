@@ -148,6 +148,22 @@ The co-occurrence of blaVIM-2 and OprD disruption is consistent with dual carbap
 
 ## Repository Structure
 
+```
+PA-ST111-WGS-analysis/
+├── data/                        # Accession list
+├── metadata/                    # Isolate metadata (country, year)
+├── results/                     # Index isolate results
+│   ├── amr/                     # AMRFinder+ results
+│   ├── mlst/                    # Sequence typing
+│   ├── qc/                      # Assembly QC
+│   └── figures/                 # Index isolate figures
+└── phylogenomics/               # Comparative analysis (n=24)
+    ├── scripts/                 # R and bash scripts
+    ├── results/                 # Tree, alignments, AMR results
+    └── figures/                 # Publication figures
+```
+
+
 ## Data Source
 
 Raw reads from NCBI SRA accession SRR39076870 (BioProject: PRJNA288601), deposited June 2026 by the Florida Department of Health under the CDC HAI-Seq surveillance programme. No associated peer-reviewed publication was available at the time of analysis. Analysis performed independently.
