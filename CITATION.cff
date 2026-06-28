@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+title: "Phylogenomics of MDR Pseudomonas aeruginosa ST111"
+authors:
+  - family-names: Devkota
+    given-names: Pareekshya
+    orcid: "https://orcid.org/0009-0003-8645-0626"
+date-released: "2026-06-28"
+url: "https://github.com/devkotapareekshya/PA-ST111-WGS-analysis"
