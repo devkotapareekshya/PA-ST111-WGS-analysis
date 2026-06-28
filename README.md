@@ -90,7 +90,9 @@ ST111 genomes downloaded from NCBI RefSeq using NCBI Datasets CLI. ST111 members
 
 ---
 
-## Repository Structure---
+## Repository Structure
+
+---
 
 ## Data Source
 
