@@ -29,14 +29,12 @@ Whole genome sequence analysis of a clinical multidrug-resistant *Pseudomonas ae
 
 **AMR genes:** blaVIM-2, blaOXA-395, fosA, sul1, tmexD2, aac(6')-29b, aph(3')-IIb
 
-**OprD:** Ten OprD-homologous regions identified — seven full-length, two truncated fragments (oprD_6/oprD_7, 58 bp apart on same contig, representing a single disrupted locus), one pseudogene remnant (oprD_9, flanked by toxin-antitoxin system rnlA/rnlB).
-
 ### Phylogenomics (n=24 ST111 genomes, 7 countries, 2004-2023)
 | Finding | Value |
 |---------|-------|
 | blaVIM-2 prevalence | 7/24 (29%) |
 | oprD disruption prevalence | 15/24 (63%) |
-| blaVIM-2 + oprD disruption co-occurrence | 0/24 (mutually exclusive) |
+| blaVIM-2 + oprD co-occurrence | 0/24 (mutually exclusive) |
 | Conserved MDR backbone | blaPDC-3, gyrA_T83I, fosA, catB7 (>90%) |
 | Independent oprD disruption events | Multiple (convergent evolution) |
 
@@ -44,13 +42,71 @@ Whole genome sequence analysis of a clinical multidrug-resistant *Pseudomonas ae
 
 ---
 
-## Methods
+## Results
 
-### Index isolate analysis
-Raw Illumina paired-end reads (SRR39076870) downloaded with fasterq-dump v2.11.3 and quality-assessed with FastQC v0.11. De novo assembly with SPAdes v3.15; quality assessed with QUAST v5.3.0 and BUSCO v6.1.0 (pseudomonadales_odb10). Taxonomic classification with Kraken2 v2.17.1. Sequence type determined with MLST v2.33.1 (PubMLST Pseudomonas aeruginosa scheme). AMR genes identified with ABRicate v1.0 and AMRFinder+ v4.2.7 (database 2026-05-15.1, --organism Pseudomonas_aeruginosa). Annotation with Prokka v1.15.6. OprD copy number assessed by BLASTn against PAO1 oprD reference (NC_002516).
+### Assembly statistics
+| Metric | Value |
+|--------|-------|
+| Total contigs | 125 |
+| Contigs >=1000 bp | 97 |
+| Total length | 7,240,967 bp |
+| N50 | 191,030 bp |
+| GC content | 65.64% |
+| BUSCO completeness | 99.7% |
 
-### Phylogenomic analysis
-ST111 genomes downloaded from NCBI RefSeq using NCBI Datasets CLI. ST111 membership confirmed with MLST v2.35.0. Core SNP alignment generated with Snippy v4.6 against PAO1 reference (GCF_000006765.1). Recombinant regions masked with Gubbins v3.3. Maximum likelihood phylogeny inferred with IQ-TREE2 (GTR+G, 1000 ultrafast bootstraps). AMR profiling with AMRFinder+ v4.2.7 (database 2026-05-15.1, --organism Pseudomonas_aeruginosa). Visualised with ggtree v4.0 in R v4.5.3.
+### AMR profile
+| Gene | Class | Mechanism |
+|------|-------|-----------|
+| blaVIM-2 | Carbapenem | Metallo-beta-lactamase |
+| blaOXA-395 | Beta-lactam | Serine beta-lactamase |
+| fosA | Fosfomycin | Glutathione transferase |
+| sul1 | Sulfonamide | Target replacement |
+| tmexD2 | Tetracycline | Efflux pump |
+| aac(6')-29b | Aminoglycoside | Acetyltransferase |
+| aph(3')-IIb | Aminoglycoside | Phosphotransferase |
+
+### OprD copy number analysis
+| Copy | Length (bp) | Status |
+|------|-------------|--------|
+| oprD_1 | 1308 | Full-length |
+| oprD_2 | 1281 | Full-length |
+| oprD_3 | 1452 | Full-length |
+| oprD_4 | 1335 | Full-length |
+| oprD_5 | 1359 | Full-length |
+| oprD_6 | 831 | Truncated (N-terminal fragment) |
+| oprD_7 | 438 | Truncated (C-terminal fragment) |
+| oprD_8 | 1419 | Full-length |
+| oprD_9 | 195 | Pseudogene |
+| oprD_10 | 1347 | Full-length |
+
+![OprD copy number status](results/figures/oprD_copy_number_status.png)
+
+oprD_6 and oprD_7 are located in tandem on the same contig (58 bp apart), together representing a single disrupted locus. oprD_9 is flanked by a toxin-antitoxin system (rnlA/rnlB), suggesting ongoing genomic rearrangement associated with resistance evolution.
+
+### Biological significance
+The co-occurrence of blaVIM-2 and OprD disruption is consistent with dual carbapenem resistance mechanisms involving enzymatic degradation and reduced outer membrane permeability. The oprD_6/oprD_7 split gene pattern suggests active genomic disruption consistent with ongoing resistance evolution — directly relevant to research on adaptive evolution of carbapenem resistance in *P. aeruginosa*.
+
+---
+
+## Pipeline
+
+### Tools and versions
+| Tool | Version | Purpose |
+|------|---------|---------|
+| fasterq-dump | 2.11.3 | Read download |
+| FastQC | 0.11 | Quality control |
+| SPAdes | 3.15 | De novo assembly |
+| QUAST | 5.3.0 | Assembly QC |
+| BUSCO | 6.1.0 | Genome completeness |
+| Kraken2 | 2.17.1 | Taxonomic classification |
+| ABRicate | 1.0 | AMR + virulence screening |
+| MLST | 2.35.0 | Sequence typing |
+| Prokka | 1.15.6 | Genome annotation |
+| AMRFinder+ | 4.2.7 | AMR profiling |
+| Snippy | 4.6 | Core SNP alignment |
+| Gubbins | 3.3 | Recombination masking |
+| IQ-TREE2 | 2.x | Phylogeny inference |
+| ggtree | 4.0 | Phylogeny visualization |
 
 ### Computational environment
 - OS: Ubuntu 22.04 LTS (WSL2 on Windows 11)
@@ -90,13 +146,13 @@ ST111 genomes downloaded from NCBI RefSeq using NCBI Datasets CLI. ST111 members
 
 ---
 
-## Repository Structure
-
----
+## Repository Structure---
 
 ## Data Source
 
-Raw reads from NCBI SRA accession SRR39076870 (BioProject: PRJNA288601), deposited June 2026 by the Florida Department of Health under the CDC HAI-Seq surveillance programme. Public genomes from NCBI RefSeq (accessions in data/st111_accessions.txt).
+Raw reads from NCBI SRA accession SRR39076870 (BioProject: PRJNA288601), deposited June 2026 by the Florida Department of Health under the CDC HAI-Seq surveillance programme. No associated peer-reviewed publication was available at the time of analysis. Analysis performed independently.
+
+Public genomes obtained from NCBI RefSeq. All accessions listed in `data/st111_accessions.txt`.
 
 ---
 
@@ -104,7 +160,7 @@ Raw reads from NCBI SRA accession SRR39076870 (BioProject: PRJNA288601), deposit
 
 If you use this repository, please cite:
 
-> Devkota P. (2026). Phylogenomics of MDR Pseudomonas aeruginosa ST111: convergent OprD loss and mutual exclusivity with blaVIM-2. GitHub. https://github.com/devkotapareekshya/PA-ST111-WGS-analysis
+> Devkota P. (2026). Phylogenomics of MDR *Pseudomonas aeruginosa* ST111: convergent OprD loss and mutual exclusivity with blaVIM-2. GitHub. https://github.com/devkotapareekshya/PA-ST111-WGS-analysis
 
 ---
 
