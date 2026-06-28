@@ -146,7 +146,7 @@ The co-occurrence of blaVIM-2 and OprD disruption is consistent with dual carbap
 
 ---
 
-## Repository Structure---
+## Repository Structure
 
 ## Data Source
 
