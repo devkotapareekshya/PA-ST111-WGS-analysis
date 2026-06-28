@@ -1,0 +1,11 @@
+genomes/
+snippy/
+gubbins/
+pa_complete_dehydrated/
+st111_raw/
+pao1_ref/
+*.zip
+*.fna
+*.fasta
+*.bam
+*.bai
