@@ -120,9 +120,21 @@ This analysis was run in a Miniconda (miniforge3) environment on Ubuntu 22.04
     conda env create -f environment.yml
     conda activate pa-st111
 
-Detailed pipeline commands and parameters for both the index isolate assembly 
-and the comparative phylogenomics will be added as standalone scripts in a 
-forthcoming update. 
+Pipeline scripts are provided for both stages of the analysis:
+
+- `run_pipeline.sh` — index isolate processing (raw reads → assembly → QC → 
+  AMR/MLST profiling)
+- `phylogenomics/scripts/run_phylogenomics.sh` — comparative phylogenomics 
+  (core SNP alignment → recombination masking → tree inference → AMR 
+  profiling across all 24 genomes)
+- `phylogenomics/scripts/plot_phylogeny_amr.R` — generates the phylogeny/AMR 
+  figure from the outputs above
+
+These scripts reflect the standard parameters for each tool, cross-checked 
+against the documented outputs in this README; see in-script comments for 
+details and any assumptions made during reconstruction.
+
+
 ### Computational environment
 - OS: Ubuntu 22.04 LTS (WSL2 on Windows 11)
 - Hardware: 8 CPU cores, 15.7 GB RAM
