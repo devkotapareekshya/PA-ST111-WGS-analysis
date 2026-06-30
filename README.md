@@ -134,6 +134,12 @@ These scripts reflect the standard parameters for each tool, cross-checked
 against the documented outputs in this README; see in-script comments for 
 details and any assumptions made during reconstruction.
 
+**Note on script provenance:** the pipeline scripts above were reconstructed from 
+documented tool versions and output statistics rather than preserved from original 
+run logs. They represent standard, default parameters for each tool and have not 
+been independently re-executed end-to-end against the raw data in this repository. 
+Exact historical run-time parameters may have differed in minor ways; see in-script 
+comments for specific assumptions made during reconstruction.
 
 ### Computational environment
 - OS: Ubuntu 22.04 LTS (WSL2 on Windows 11)
@@ -193,10 +199,15 @@ PA-ST111-WGS-analysis/
 
 ## Data Source
 
-Raw reads from NCBI SRA accession SRR39076870 (BioProject: PRJNA288601), deposited June 2026 by the Florida Department of Health under the CDC HAI-Seq surveillance programme. No associated peer-reviewed publication was available at the time of analysis. Analysis performed independently.
+Raw reads from NCBI SRA accession SRR39076870 (BioProject: PRJNA288601), deposited 
+June 2026 by the Florida Department of Health under the CDC HAI-Seq surveillance 
+programme. This isolate had no associated peer-reviewed publication at the time of 
+analysis; the dataset was publicly accessible via NCBI SRA, and this reanalysis was 
+conducted independently as a training/portfolio exercise in WGS-based AMR surveillance 
+methodology, not in coordination with the depositing institution. No claims are made 
+regarding the original surveillance findings or conclusions of the depositing agency.
 
 Public genomes obtained from NCBI RefSeq. All accessions listed in `data/st111_accessions.txt`.
-
 ---
 
 ## Citation
