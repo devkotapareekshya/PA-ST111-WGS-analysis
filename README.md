@@ -112,6 +112,17 @@ The co-occurrence of blaVIM-2 and OprD disruption is consistent with dual carbap
 | IQ-TREE2 | 2.x | Phylogeny inference |
 | ggtree | 4.0 | Phylogeny visualization |
 
+## Reproducibility
+
+This analysis was run in a Miniconda (miniforge3) environment on Ubuntu 22.04 
+(WSL2). To recreate the environment:
+
+    conda env create -f environment.yml
+    conda activate pa-st111
+
+Detailed pipeline commands and parameters for both the index isolate assembly 
+and the comparative phylogenomics will be added as standalone scripts in a 
+forthcoming update. 
 ### Computational environment
 - OS: Ubuntu 22.04 LTS (WSL2 on Windows 11)
 - Hardware: 8 CPU cores, 15.7 GB RAM
