@@ -208,6 +208,7 @@ methodology, not in coordination with the depositing institution. No claims are 
 regarding the original surveillance findings or conclusions of the depositing agency.
 
 Public genomes obtained from NCBI RefSeq. All accessions listed in `data/st111_accessions.txt`.
+
 ---
 
 ## Citation
