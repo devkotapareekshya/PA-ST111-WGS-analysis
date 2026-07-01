@@ -112,6 +112,26 @@ The co-occurrence of blaVIM-2 and OprD disruption is consistent with dual carbap
 | IQ-TREE2 | 2.x | Phylogeny inference |
 | ggtree | 4.0 | Phylogeny visualization |
 
+## Automated OprD Disruption Detection Tool
+
+This repository includes a custom Python tool (`detect_oprd_disruption.py`) that automates detection and classification of OprD structural integrity from bacterial genome assemblies, built to support the OprD copy-number analysis described above.
+
+**Usage**
+
+    python detect_oprd_disruption.py --assembly your_assembly.fasta --reference oprD_reference.fasta --gene_name oprD --outdir results/
+
+Or run on multiple genomes at once with Snakemake:
+
+    snakemake --cores 4
+
+**Classification thresholds**
+
+| Status | Coverage | Identity |
+|--------|----------|----------|
+| Full-length | ≥ 90% | ≥ 95% |
+| Truncated | 50–90% | ≥ 70% |
+| Pseudogene | < 50% | ≥ 70% |
+| Absent | 0% | — |
 ## Reproducibility
 
 This analysis was run in a Miniconda (miniforge3) environment on Ubuntu 22.04 
